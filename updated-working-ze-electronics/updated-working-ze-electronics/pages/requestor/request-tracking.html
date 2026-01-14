@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request-Tracking</title>
+    <link rel="stylesheet" href="../../assets/css/requestor/request-tracking.css">
+ 
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="../../assets/images/avatar.jpg" alt="Profile">
+        </div>
+        <div class="role-badge">REQUESTOR</div>
+
+        <nav class="menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="create-request.html">Create Request</a>
+            <a href="#" class="active"> Request-Tracking</a>
+            <a href="activity-history.html">History</a>
+        </nav>
+
+        <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+    </aside>
+
+    <main class="main-content">
+        <h1 class="dashboard-title">Request Tracking</h1>
+
+        <div class="grid-container">
+            <div class="card pending">
+                <h2 class="card-title"><i class="fas fa-clock"></i> Pending Requests</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PR#</th>
+                            <th>Item</th>
+                            <th>Date Submitted</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PR-2025-015</td>
+                            <td>Office Chairs x10</td>
+                            <td>Dec 15, 2025</td>
+                            <td><span class="status-badge pending-status">Pending Approval</span></td>
+                        </tr>
+                        <tr>
+                            <td>PR-2025-014</td>
+                            <td>Laptops x5</td>
+                            <td>Dec 14, 2025</td>
+                            <td><span class="status-badge pending-status">Under Review</span></td>
+                        </tr>
+                        <tr>
+                            <td>PR-2025-013</td>
+                            <td>Projector x1</td>
+                            <td>Dec 12, 2025</td>
+                            <td><span class="status-badge pending-status">Awaiting Manager</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card approved">
+                <h2 class="card-title"><i class="fas fa-check-circle"></i> Approved Requests</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PR#</th>
+                            <th>Item</th>
+                            <th>Date Approved</th>
+                            <th>PO#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PR-2025-012</td>
+                            <td>Monitors x8</td>
+                            <td>Dec 10, 2025</td>
+                            <td>PO-11905</td>
+                        </tr>
+                        <tr>
+                            <td>PR-2025-011</td>
+                            <td>Printer Ink x20</td>
+                            <td>Dec 08, 2025</td>
+                            <td>PO-11903</td>
+                        </tr>
+                        <tr>
+                            <td>PR-2025-010</td>
+                            <td>USB Drives x50</td>
+                            <td>Dec 05, 2025</td>
+                            <td>PO-11899</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <footer class="footer">
+            <p>© 20XX – ZE Electronics, Inc. All rights reserved.</p>
+            <p>Item 1 | Item 2 | Item 3</p>
+        </footer>
+        </div>
+    </main>
+
+</body>
+</html>

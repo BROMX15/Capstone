@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Approvals</title>
+    <link rel="stylesheet" href="../../assets/css/finance/budget-approvals.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="../../assets/images/avatar.jpg" alt="Profile">
+        </div>
+        <nav class="menu">
+          
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#" class="active">Budget Approvals</a>
+            <a href="#">PR & PO Tracking</a>
+              <a href="history-logs.html">History</a>
+        </nav>
+        <button class="logout">LOGOUT</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="search-bar">
+                <div class="icon"></div>
+                <input type="text" placeholder="Search requests, PR#, items...">
+            </div>
+
+            <div class="card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Item ID</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="5" class="empty-state">
+                                No pending budget approvals
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>© 2025 – ZE Electronics, Inc. All rights reserved.</p>
+                <p class="links">Item 1 | Item 2 | Item 3</p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background:#121212;
+    color:#e0e0e0;
+    min-height:100vh;
+    display:flex;
+}
+
+.sidebar {
+    width: 280px;
+    background: #1f1f1f;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    position: relative;
+}
+
+.sidebar.hide { transform: translateX(-100%); }
+.show-sidebar { transform: translateX(0) !important; }
+
+/* Profile Circle */
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #0b6d3a;
+    display: block;
+    margin: 0 auto 40px;
+    object-fit: cover;
+}
+
+/* Menu */
+.menu a {
+    display: block;
+    padding: 18px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #0a5f34;
+    transform: translateX(8px);
+}
+
+.menu a.active {
+    background: #0d4928;
+    font-weight: bold;
+}
+
+/* Logout Button */
+.logout {
+    margin-top: auto;
+    padding: 16px;
+    background: #cc1f1f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout:hover {
+    background: #ff2626;
+    transform: scale(1.05);
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex:1;
+    background:#2a2a2a;
+    display:flex;
+    flex-direction:column;
+}
+
+.header {
+    padding:40px 50px 20px;
+}
+.header h1 {
+    font-size:28px;
+    font-weight:600;
+    color:#fff;
+}
+
+/* TABS */
+.tabs {
+    padding:0 50px;
+    margin-bottom:30px;
+    display:flex;
+    gap:16px;
+}
+.tab {
+    padding:12px 32px;
+    background:#333;
+    color:#aaa;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+.tab.active, .tab:hover {
+    background:#008055;
+    color:white;
+}
+
+/* CONTENT CARD */
+.content-card {
+    flex:1;
+    margin:0 50px;
+    background:#f0f0f0;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+.footer {
+    padding:30px 50px;
+    text-align:center;
+    color:#888;
+    font-size:14px;
+}
+.footer p:last-child {
+    margin-top:8px;
+    color:#00ff9d;
+}

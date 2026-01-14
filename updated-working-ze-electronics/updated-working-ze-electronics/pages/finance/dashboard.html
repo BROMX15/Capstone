@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile">
+        </div>
+
+        <nav class="menu">
+            
+            <a href="#" class="active">Dashboard</a>
+            <a href="budgetapprovals.html">Budget Approvals</a>
+            <a href="#">PR & PO Tracking</a>
+            <a href="history-logs.html">History</a>
+        </nav>
+
+        <button class="logout">LOGOUT</button>
+    </aside>
+
+    <main class="main-content">
+        <div class="grid">
+            <div class="card notifications">
+                <h3>Notifications</h3>
+                <p class="empty">No new notifications</p>
+            </div>
+
+            <div class="card">
+                <h3>Rejected</h3>
+                <table class="table">
+                    <thead><tr><th>PR#</th><th>Date Rejected</th><th>Item</th><th>Rejected by</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="empty">No rejected requests</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>For Payment</h3>
+                <table class="table">
+                    <thead><tr><th>PR#</th><th>Item</th><th>Date Approved</th><th>PO#</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="empty">No requests for payment</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="card budget">
+                <h3>Budget</h3>
+                <div class="amount">9.41M</div>
+                <p>Total Budget given</p>
+            </div>
+
+            <div class="card spent">
+                <h3>Total spent</h3>
+                <div class="amount">14.9M</div>
+                <p>Total Used Budget</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 – ZE Electronics, Inc. All rights reserved.</p>
+            <p>Item 1 | Item 2 | Item 3</p>
+        </footer>
+    </main>
+
+</body>
+</html>

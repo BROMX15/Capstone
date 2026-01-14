@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZE Electronic - User Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../assets/css/admin/user-management.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="../../assets/images/avatar.jpg" alt="Admin" />
+        <span class="role">ADMIN</span>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="admin-dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="user-management.html" class="active"><i class="fas fa-users"></i> User Management</a></li>
+          <li><a href="pending-approvals.html"><i class="fas fa-clock"></i> Pending Approvals</a></li>
+          <li><a href="#"><i class="fas fa-download"></i> Export</a></li>
+          <li><a href="activity-history.html"><i class="fas fa-history"></i> History</a></li>
+        </ul>
+      </nav>
+      <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="page-header">
+        <h1>User Management</h1>
+        <button class="add-btn" onclick="openAddModal()">
+          <i class="fas fa-plus"></i> Add Employee
+        </button>
+      </div>
+
+      <div class="search-bar">
+        <div class="search-input">
+          <input type="text" placeholder="Search ID" />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <table class="employee-table">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>Last Name</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Role</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody">
+            <tr><td colspan="8">Loading users...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD MODAL -->
+  <div id="addModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddModal()">&times;</span>
+      <h2 class="modalAdd">Add Employee</h2>
+      <form id="addForm">
+        <div class="form-grid">
+          <div class="form-group"><label>First Name</label><input type="text" id="addFirstName" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="addLastName" required></div>
+          <div class="form-group"><label>Middle Name</label><input type="text" id="addMiddleName"></div>
+          <div class="form-group"><label>Username</label><input type="text" id="addUsername" required></div>
+          <div class="form-group"><label>Email</label><input type="email" id="addEmail" required></div>
+          <div class="form-group"><label>Password</label><input type="password" id="addPassword" required></div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="addGender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <select id="addRole">
+              <option value="ADMIN">Admin</option>
+              <option value="APPROVER">Approver</option>
+              <option value="REQUESTOR">Requestor</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" onclick="closeAddModal()">Cancel</button>
+          <button type="submit" class="save-btn">Add Employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- EDIT MODAL -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEditModal()">&times;</span>
+      <h2 class="modalEdit">Edit User</h2>
+      <form id="editForm">
+        <div class="form-grid">
+          <div class="form-group"><label>First Name</label><input type="text" id="editFirstName" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="editLastName" required></div>
+          <div class="form-group"><label>Middle Name</label><input type="text" id="editMiddleName"></div>
+          <div class="form-group"><label>Email</label><input type="email" id="editEmail" required></div>
+          <div class="form-group">
+            <label>Gender</label>
+            <select id="editGender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <select id="editRole">
+              <option value="ADMIN">Admin</option>
+              <option value="APPROVER">Approver</option>
+              <option value="REQUESTOR">Requestor</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="cancel-btn" onclick="closeEditModal()">Cancel</button>
+          <button type="submit" class="save-btn">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SEPARATE JS FILE -->
+  <script src="../../assets/js/admin/user-management.js"></script>
+</body>
+</html>

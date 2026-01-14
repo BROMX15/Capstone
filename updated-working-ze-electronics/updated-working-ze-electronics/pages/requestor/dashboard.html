@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZE Electronic - Requestor Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../assets/css/requestor/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="../../assets/images/avatar.jpg" alt="Requestor" />
+          <span class="role">REQUESTOR</span>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#" class="active">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="create-request.html">
+                <i class="fas fa-plus-circle"></i> Create Request
+              </a>
+            </li>
+            <li>
+              <a href="request-tracking.html">
+                <i class="fas fa-search"></i> Request Tracking
+              </a>
+            </li>
+            <li>
+              <a href="activity-history.html">
+                <i class="fas fa-history"></i> History
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <h1 class="page-title">Requestor Dashboard</h1>
+
+        <!-- COMPACT STATISTICS CARDS -->
+        <div class="stats-grid">
+          <div class="stat-card pending">
+            <h3>PENDING</h3>
+            <div class="number">5</div>
+            <div class="change">+1 Today</div>
+            <i class="fas fa-clock icon"></i>
+          </div>
+
+          <div class="stat-card approved">
+            <h3>APPROVED</h3>
+            <div class="number">67</div>
+            <div class="change">+4 Today</div>
+            <i class="fas fa-check-circle icon"></i>
+          </div>
+
+          <div class="stat-card for-payment">
+            <h3>FOR PAYMENT</h3>
+            <div class="number">12</div>
+            <div class="change">+2 Today</div>
+            <i class="fas fa-dollar-sign icon"></i>
+          </div>
+
+          <div class="stat-card rejected">
+            <h3>REJECTED</h3>
+            <div class="number">3</div>
+            <div class="change">+1 Today</div>
+            <i class="fas fa-times-circle icon"></i>
+          </div>
+        </div>
+
+        <!-- COMPACT ACTIVITY & REQUESTS SECTION -->
+        <div class="activity-section">
+          <!-- Recent Activity -->
+          <div class="recent-activity">
+            <h3><i class="fas fa-bell"></i> Recent Activity</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <strong>New Approval</strong><br />
+                PR#1024 (100 Microchips) approved
+              </div>
+              <div class="activity-item">
+                <strong>Status Update</strong><br />
+                PR#1019 now For Payment
+              </div>
+              <div class="activity-item">
+                <strong>Rejected</strong><br />
+                PR#1015 - Insufficient budget
+              </div>
+              <div class="activity-item empty">No more notifications</div>
+            </div>
+          </div>
+
+          <!-- My Recent Requests -->
+          <div class="my-requests">
+            <h3><i class="fas fa-list-alt"></i> My Recent Requests</h3>
+            <table class="request-table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Date</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Microchips</td>
+                  <td>100</td>
+                  <td>7,000 USD</td>
+                  <td>11/21/2025</td>
+                  <td>Spare Parts</td>
+                  <td><span class="status approved">Approved</span></td>
+                </tr>
+                <tr>
+                  <td>Capacitors</td>
+                  <td>500</td>
+                  <td>1,200 USD</td>
+                  <td>12/15/2025</td>
+                  <td>Components</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>Tools Kit</td>
+                  <td>1</td>
+                  <td>350 USD</td>
+                  <td>01/01/2026</td>
+                  <td>Equipment</td>
+                  <td><span class="status rejected">Rejected</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

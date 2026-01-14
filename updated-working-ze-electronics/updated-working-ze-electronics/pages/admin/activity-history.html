@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZE Electronic - History</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/admin/activity-history.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="../../assets/images/avatar.jpg" alt="Admin" />
+          <span class="role">ADMIN</span>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="admin-dashboard.php"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="user-management.html"
+                ><i class="fas fa-users"></i> User Management</a
+              >
+            </li>
+            <li>
+              <a href="pending-approvals.html"
+                ><i class="fas fa-clock"></i> Pending Approvals</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-download"></i> Export</a>
+            </li>
+            <li>
+              <a href="activity-history.html" class="active"
+                ><i class="fas fa-history"></i> History</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="page-header">
+          <h1>Activity History</h1>
+          <div class="filter-controls">
+            <select class="filter-select">
+              <option>All Activities</option>
+              <option>Approvals</option>
+              <option>User Changes</option>
+              <option>Login Events</option>
+            </select>
+            <input type="date" class="date-filter" />
+          </div>
+        </div>
+
+        <!-- History Timeline Card -->
+        <div class="history-card">
+          <div class="timeline">
+            <!-- History Item -->
+            <div class="timeline-item">
+              <div class="timeline-icon approved">
+                <i class="fas fa-check"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>PR-2025-001 Approved</h3>
+                  <span class="time">Today, 2:34 PM</span>
+                </div>
+                <p>
+                  <strong>Carillo Prades</strong> approved purchase request for
+                  <strong>100 Microchips</strong>
+                </p>
+                <small>PO# PO-11892 generated</small>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon rejected">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>PR-2025-002 Rejected</h3>
+                  <span class="time">Today, 11:12 AM</span>
+                </div>
+                <p>
+                  <strong>John Smith</strong> rejected request: "Budget not
+                  approved"
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon user">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>New User Added</h3>
+                  <span class="time">Yesterday, 4:56 PM</span>
+                </div>
+                <p>
+                  <strong>Maria Garcia</strong> was added as
+                  <strong>Requestor</strong> by Admin
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon login">
+                <i class="fas fa-sign-in-alt"></i>
+              </div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Login Successful</h3>
+                  <span class="time">Yesterday, 9:03 AM</span>
+                </div>
+                <p>
+                  <strong>prades@gmail.com</strong> logged in from IP
+                  192.168.1.105
+                </p>
+              </div>
+            </div>
+
+            <!-- Add more items as needed -->
+          </div>
+        </div>
+
+        <div class="load-more">
+          <button class="load-more-btn">Load More Activities</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

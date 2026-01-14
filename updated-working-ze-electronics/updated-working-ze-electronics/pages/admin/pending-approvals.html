@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZE Electronic - Pending Approvals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/admin/pending-style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar - same as all your pages -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="../../assets/images/avatar.jpg" alt="Admin" />
+          <span class="role">ADMIN</span>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="admin-dashboard.php"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="user-management.html"
+                ><i class="fas fa-users"></i> User Management</a
+              >
+            </li>
+            <li>
+              <a href="pending-approvals.html" class="active"
+                ><i class="fas fa-clock"></i> Pending Approvals</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-download"></i> Export</a>
+            </li>
+            <li>
+              <a href="activity-history.html"><i class="fas fa-history"></i> History</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="page-header">
+          <h1>Pending Approvals</h1>
+          <div class="search-bar">
+            <input type="text" placeholder="Search Order Number" />
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <!-- Approvals Table Card -->
+        <div class="table-card">
+          <table class="approval-table">
+            <thead>
+              <tr>
+                <th>PR#</th>
+                <th>Requestor</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>PO#</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>PR-2025-001</strong></td>
+                <td>Carillo Prades</td>
+                <td>11/21/2025</td>
+                <td>Microchips ×100<br /><br />Capacitors ×500</td>
+                <td><span class="po-number">-</span></td>
+                <td class="actions">
+                  <button class="approve-btn">
+                    <i class="fas fa-check"></i> Approve
+                  </button>
+                  <button class="reject-btn">
+                    <i class="fas fa-times"></i> Reject
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PR-2025-002</strong></td>
+                <td>John Smith</td>
+                <td>11/20/2025</td>
+                <td>LED Display ×20</td>
+                <td><span class="po-number">-</span></td>
+                <td class="actions">
+                  <button class="approve-btn">
+                    <i class="fas fa-check"></i> Approve
+                  </button>
+                  <button class="reject-btn">
+                    <i class="fas fa-times"></i> Reject
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>PR-2025-003</strong></td>
+                <td>Maria Garcia</td>
+                <td>11/19/2025</td>
+                <td>PCB Boards ×200</td>
+                <td><span class="po-number">PO-11892</span></td>
+                <td class="actions">
+                  <button class="view-btn">
+                    <i class="fas fa-eye"></i> View PO
+                  </button>
+                </td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

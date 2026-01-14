@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZE Electronic - Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/approver/approver-dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="../../assets/images/avatar.jpg" alt="User" />
+          <span class="role">APPROVER</span>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#" class="active"
+                ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="pending-approvals.html"><i class="fas fa-clock"></i> Pending Requests</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-history"></i> History</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Team</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="../../backend/auth/logout.php" class="logout-btn">LOGOUT</a>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>Dashboard Overview</h1>
+
+        <div class="content-wrapper">
+          <!-- Left Section - Stats & Table -->
+          <div class="left-section">
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+              <div class="card pending">
+                <div>
+                  <h3>Pending Requests</h3>
+                  <div class="number">12</div>
+                  <div class="change pending">+3 today</div>
+                </div>
+                <i class="fas fa-clock"></i>
+              </div>
+
+              <div class="card approved">
+                <div>
+                  <h3>Approved This Month</h3>
+                  <div class="number">48</div>
+                  <div class="change approved">+18%</div>
+                </div>
+                <i class="fas fa-check-circle"></i>
+              </div>
+
+              <div class="card delays">
+                <div>
+                  <h3>Delayed POs</h3>
+                  <div class="number">5</div>
+                  <div class="change delays">Requires attention</div>
+                </div>
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+
+              <div class="card rejects">
+                <div>
+                  <h3>Rejected Requests</h3>
+                  <div class="number">2</div>
+                </div>
+                <i class="fas fa-times-circle"></i>
+              </div>
+            </div>
+
+            <!-- Recent Requests Table -->
+            <div class="table-card">
+              <div class="table-header">
+                <i class="fas fa-shopping-cart"></i>
+                Recent Purchase Requests
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>PR#</th>
+                    <th>Requestor</th>
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>PR-2025-012</strong></td>
+                    <td>John Smith</td>
+                    <td>Microcontrollers ×50</td>
+                    <td>₱84,500</td>
+                    <td>
+                      <span class="pending-icon"
+                        ><i class="fas fa-clock"></i
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>PR-2025-011</strong></td>
+                    <td>Maria Garcia</td>
+                    <td>PCB Boards ×200</td>
+                    <td>₱156,000</td>
+                    <td>
+                      <span class="pending-icon"
+                        ><i class="fas fa-clock"></i
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>PR-2025-010</strong></td>
+                    <td>Robert Tan</td>
+                    <td>Capacitors ×1000</td>
+                    <td>₱42,300</td>
+                    <td>
+                      <span class="pending-icon"
+                        ><i class="fas fa-clock"></i
+                      ></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Right Section - Recent Activity -->
+          <div class="recent-activity">
+            <h3><i class="fas fa-bell"></i> Recent Activity</h3>
+            <div class="activity-item">
+              <strong>PR-2025-009 Approved</strong>
+              <small>2 hours ago</small>
+              <p>
+                You approved <strong>LED Displays ×30</strong> worth ₱92,000
+              </p>
+            </div>
+            <div class="activity-item">
+              <strong>New Request Received</strong>
+              <small>5 hours ago</small>
+              <p>John Smith submitted PR-2025-012</p>
+            </div>
+            <div class="activity-item">
+              <strong>PO Delayed</strong>
+              <small>1 day ago</small>
+              <p>PO-11892 from Supplier A is delayed</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
